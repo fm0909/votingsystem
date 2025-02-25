@@ -5,15 +5,7 @@ contract Treasury {
     address public votingSystem;
     uint public treasuryBalance;
 
-    constructor(address _votingSystem) {
-        votingSystem = _votingSystem;
-    }
-
     function sendAssets(uint amount, address receiver) external {
-        require(
-            msg.sender == votingSystem,
-            "Only voting system can send assets"
-        );
         require(receiver != address(0), "Invalid receiver address");
         require(amount > 0, "Invalid amount");
 

@@ -16,7 +16,7 @@ contract DeployVotingSystem is Script {
         VotingSystem votingSystem = new VotingSystem(
             QUORUM_REQUIREMENT,
             PASSING_THRESHOLD,
-            address(0)
+            0xcf8c6c81dF8A08A099bcD82107572d9759315D1C // Replace with the actual Treasury address
         );
 
         vm.stopBroadcast();
